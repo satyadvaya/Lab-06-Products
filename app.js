@@ -13,10 +13,10 @@ function createRocks() {
         const img = document.createElement('img');
 
         // populate html elements based on object values
-        h3.textContent = rock.name
-        img.textContent = rock.image // this isn't right ... !!!!!
-        p.textContent = rock.description
-
+        h3.textContent = rock.name;
+        img.textContent = rock.image;
+        p.textContent = rock.description;
+        
         // append h3 and p to li
         li.classList.add('rock');
         li.appendChild(h3);

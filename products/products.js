@@ -1,4 +1,4 @@
-import rocks from '../data/rocks.js';
+import rocks from '../rocks.js';
 import renderRock from './render-rock.js';
 
 const list = document.getElementById('rocks');
