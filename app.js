@@ -1,5 +1,5 @@
 // import rocks data
-import rocks from './rocks.js';
+import rocks from './data/rocks.js';
 
 // get elements from DOM
 const container = document.getElementById('container');
