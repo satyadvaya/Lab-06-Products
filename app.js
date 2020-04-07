@@ -16,7 +16,7 @@ function createRocks() {
         h3.textContent = rock.name;
         img.textContent = rock.image;
         p.textContent = rock.description;
-        
+
         // append h3 and p to li
         li.classList.add('rock');
         li.appendChild(h3);
@@ -25,7 +25,7 @@ function createRocks() {
 
         // append li to div
         container.appendChild(li);
-    })
+    });
 }
 
 createRocks();
