@@ -12,6 +12,10 @@ function renderRock(rock) {
     img.alt = rock.name + ' image';
     li.appendChild(img);
 
+    const description = document.createElement('p');
+    description.textContent = rock.description;
+    li.appendChild(description);
+
     const p = document.createElement('p');
     p.className = 'price';
 
@@ -24,8 +28,8 @@ function renderRock(rock) {
     
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = rock.code;
-    p.appendChild(button);
+    button.value = rock.id;
+    li.appendChild(button);
 
     li.appendChild(p);
 
