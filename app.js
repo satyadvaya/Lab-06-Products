@@ -7,7 +7,7 @@ const container = document.getElementById('container');
 // loop through array, create DOM elements
 function createRocks() {
     rocks.forEach(rock => {
-        const l1 = document.createElement('li');
+        const li = document.createElement('li');
         const h3 = document.createElement('h3');
         const p = document.createElement('p');
         const img = document.createElement('img');
