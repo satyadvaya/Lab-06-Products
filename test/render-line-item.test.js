@@ -1,5 +1,4 @@
 import renderLineItem, { makeReadablePrice } from '../shopping-cart/render-line-items.js';
-import rocks from '../data/rocks.js';
 
 const test = QUnit.test;
 
@@ -14,7 +13,7 @@ test('makeReadablePrice', assert => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = makeReadablePrice(price);
-
+    
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(actual, expected);
@@ -37,7 +36,7 @@ test('renders a line item', assert => {
         price: 1.04,
         cost: 0.54
     };
-    const expected = '<tr><td>Apatite</td><td>2</td><td>1.04</td><td>2.08</td></tr>';
+    const expected = '<tr><td>Apatite</td><td>2</td><td>$1.04</td><td>$2.08</td></tr>';
 
     //Act 
     // Call the function you're testing and set the result to a const
