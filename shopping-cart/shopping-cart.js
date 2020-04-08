@@ -22,3 +22,4 @@ for (let i = 0; i < cart.length; i++) {
 // make a total row line that has all the cart items added up
 const orderTotal = calcOrderTotal(cart, rocks);
 orderTotalCell.textContent = toUSD(orderTotal);
+
