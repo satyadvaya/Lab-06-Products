@@ -1,5 +1,6 @@
-import { findById, calcLineItem } from '../common/utils.js';
+import { findById, calcLineTotal, calcOrderTotal } from '../common/utils.js';
 import rocks from '../data/rocks.js';
+import cart from '../data/cart.js';
 
 const test = QUnit.test;
 
@@ -35,7 +36,7 @@ test('find product by id assigns null value to id if not found', assert => {
     assert.equal(foundRock, expected);
 });
 
-test('calculate line item', (assert) => {
+test('calculate line total', (assert) => {
     //Arrange
     // Set up your parameters and expectations
     const quantity = 2;
@@ -44,9 +45,24 @@ test('calculate line item', (assert) => {
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const productCost = calcLineItem(quantity, price);
+    const total = calcLineTotal(quantity, price);
 
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(productCost, expected);
+    assert.equal(total, expected);
+});
+
+test('calculate order total', (assert) => {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = 25.80;
+
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const orderTotal = calcOrderTotal(cart, rocks);
+
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.equal(orderTotal, expected);
 });
