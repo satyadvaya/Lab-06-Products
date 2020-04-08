@@ -20,7 +20,7 @@ function renderTableRow(cartItem, rock) {
     const totalTd = document.createElement('td');
     const totalPrice = (rock.price * cartItem.quantity);
     totalTd.textContent = makeReadablePrice(totalPrice);
-    totalTd.classList.add('line-item-total');
+    totalTd.classList.add;
 
     tr.appendChild(nameTd);
     tr.appendChild(quantityTd);
