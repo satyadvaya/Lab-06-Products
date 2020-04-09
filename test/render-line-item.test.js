@@ -1,4 +1,4 @@
-import renderLineItem, { makeReadablePrice } from '../shopping-cart/render-line-items.js';
+import renderLineItem, { makeReadablePrice } from '../shopping-cart/render-line-item.js';
 
 const test = QUnit.test;
 
@@ -13,7 +13,7 @@ test('makeReadablePrice', assert => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = makeReadablePrice(price);
-    
+
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(actual, expected);
