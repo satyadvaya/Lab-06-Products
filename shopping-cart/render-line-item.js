@@ -1,28 +1,33 @@
-import { toUSD } from '../common/utils.js';
+export function makeReadablePrice(price) {
+    const readablePrice = `$${Number(price).toFixed(2)}`;
+    
+    return readablePrice;
+}
 
-function renderLineItem(lineItem, fruit) {
+function renderTableRow(cartItem, rock) {
     const tr = document.createElement('tr');
 
-    const nameCell = document.createElement('td');
-    nameCell.className = 'align-left';
-    nameCell.textContent = fruit.name;
-    tr.appendChild(nameCell);
+    const nameTd = document.createElement('td');
+    nameTd.textContent = rock.name;
+    nameTd.classList.add;
 
-    const quantityCell = document.createElement('td');
-    quantityCell.textContent = lineItem.quantity;
-    tr.appendChild(quantityCell);
+    const quantityTd = document.createElement('td');
+    quantityTd.textContent = cartItem.quantity;
 
-    const priceCell = document.createElement('td');
-    priceCell.textContent = toUSD(fruit.price);
-    tr.appendChild(priceCell);
-    
-    const totalCell = document.createElement('td');
-    totalCell.className = 'line-item-total';
-    const total = lineItem.quantity * fruit.price;
-    totalCell.textContent = toUSD(total);
-    tr.appendChild(totalCell);
+    const priceTd = document.createElement('td');
+    priceTd.textContent = makeReadablePrice(rock.price);
+
+    const totalTd = document.createElement('td');
+    const totalPrice = (rock.price * cartItem.quantity);
+    totalTd.textContent = makeReadablePrice(totalPrice);
+    totalTd.classList.add;
+
+    tr.appendChild(nameTd);
+    tr.appendChild(quantityTd);
+    tr.appendChild(priceTd);
+    tr.appendChild(totalTd);
 
     return tr;
 }
 
-export default renderLineItem;
+export default renderTableRow;
